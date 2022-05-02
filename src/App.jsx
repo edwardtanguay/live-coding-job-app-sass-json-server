@@ -32,7 +32,7 @@ function App() {
 	const saveToLocalStorage = () => {
 		if (displayKind !== '') {
 			const jobAppState = {
-				displayKind
+				displayKind,
 			};
 			localStorage.setItem('jobAppState', JSON.stringify(jobAppState));
 		}
@@ -61,7 +61,7 @@ function App() {
 			const _jobs = await response.json();
 			setJobs(_jobs);
 		})();
-	}
+	};
 
 	useEffect(() => {
 		loadJobs();
@@ -82,6 +82,20 @@ function App() {
 		setDisplayKind(displayKinds[displayKindIndex]);
 	};
 
+	const saveJobStatusToDb = async (job) => {
+		const requestOptions = {
+			method: 'PATCH',
+			body: JSON.stringify({ "status": job.status }),
+			headers: { 'Content-type': 'application/json; charset=UTF-8' },
+		};
+		try {
+			await fetch(jobsUrl + '/' + job.id, requestOptions);
+		}
+		catch (e) {
+			console.log(e.message);
+		}
+	};
+
 	const handleStatusChange = (job) => {
 		let statusIndex = statuses.indexOf(job.status);
 		statusIndex++;
@@ -90,6 +104,7 @@ function App() {
 		}
 		job.status = statuses[statusIndex];
 		setJobs([...jobs]);
+		saveJobStatusToDb(job);
 	};
 
 	const handleSubmitButton = (e) => {
@@ -143,11 +158,19 @@ function App() {
 				<>
 					<div className="buttonArea">
 						{userGroup === 'fullAccessMembers' && (
-							<button className="btn_normal" onClick={handleToggleView}>
+							<button
+								className="btn_normal"
+								onClick={handleToggleView}
+							>
 								Toggle View
 							</button>
 						)}
-						<button className="btn_logout" onClick={handleLogoutButton}>Logout</button>
+						<button
+							className="btn_logout"
+							onClick={handleLogoutButton}
+						>
+							Logout
+						</button>
 					</div>
 					{displayKind === 'full' && (
 						<JobsFull
