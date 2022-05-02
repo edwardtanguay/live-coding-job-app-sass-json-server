@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './styles/App.scss';
-import db from './data/db.json';
+// import db from './data/db.json';
 import { JobsFull } from './components/JobsFull';
 import { JobsList } from './components/JobsList';
 import md5 from 'md5';
@@ -8,11 +8,11 @@ import { AddJob } from './components/AddJob';
 
 const jobsUrl = 'http://localhost:4556/jobs';
 
-const _jobs = db.jobs;
+// const _jobs = db.jobs;
 
-_jobs.forEach((job) => {
-	job.status = 'accepted';
-});
+// _jobs.forEach((job) => {
+// 	job.status = 'accepted';
+// });
 
 const techItemsUrl = 'https://edwardtanguay.netlify.app/share/techItems.json';
 
@@ -32,8 +32,7 @@ function App() {
 	const saveToLocalStorage = () => {
 		if (displayKind !== '') {
 			const jobAppState = {
-				displayKind,
-				jobs,
+				displayKind
 			};
 			localStorage.setItem('jobAppState', JSON.stringify(jobAppState));
 		}
@@ -43,10 +42,8 @@ function App() {
 		const jobAppState = JSON.parse(localStorage.getItem('jobAppState'));
 		if (jobAppState === null) {
 			setDisplayKind('list');
-			setJobs(_jobs);
 		} else {
 			setDisplayKind(jobAppState.displayKind);
-			setJobs(jobAppState.jobs);
 		}
 	};
 
@@ -61,8 +58,8 @@ function App() {
 	const loadJobs = () => {
 		(async () => {
 			const response = await fetch(jobsUrl);
-			const data = await response.json();
-			console.log(data);
+			const _jobs = await response.json();
+			setJobs(_jobs);
 		})();
 	}
 

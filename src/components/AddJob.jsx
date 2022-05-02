@@ -32,7 +32,7 @@ export const AddJob = () => {
 			<ul className="jobSites">
 				{jobSites.map((jobSite, index) => {
 					return (
-						<li>
+						<li key={index}>
 							<a target="_blank" href={jobSite.url}>
 								{jobSite.name}
 							</a>
@@ -92,7 +92,7 @@ export const AddJob = () => {
 						<div className="info">{errors.skills?.message}</div>
 					</div>
 					<div className="row">
-						<textArea
+						<textarea
 							className="field_bulkText"
 							{...register('bulkText', {
 								required:
