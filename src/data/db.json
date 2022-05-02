@@ -1,18 +1,21 @@
 {
 	"jobs": [
 		{
+			"id": 1,
 			"position": "Frontend Web Entwickler",
 			"url": "https://berlinstartupjobs.com/engineering/frontend-web-entwickler-interhome-gmbh-part-of-hotelplan-group",
 			"skills": "TypeScript, VueJS, NUXT, HTML, CSS, TailWind",
 			"bulkText": "Deine Aufgaben Gemeinsam mit Kolleginnen und Kollegen in Deinem Team entwickelst Du die verschiedenen Webseiten und Webanwendungen der Interhome Group weiter Du programmierst Webseiten und Progressive Webapps in modernen Webtechnologien Technische Umsetzung von Designs in CSS Du bist ein/e Vollblut-Software-Entwickler/in und bringst folgende Skills mit: Gute Kenntnisse in Javascript und optional Typescript, insbesondere VueJS und NUXT Gute allgemeine Kenntnisse von HTML, CSS (Kenntnisse von TailwindCSS sind von Vorteil) Interesse an neuen Technologien sowie Spaß am Entwickeln Gute Deutsch- und Englischkenntnisse Teamfähigkeit und Kommunikationsstärke Projekterfahrung als Entwickler/in sind von Vorteil Idealerweise DevOps-Erfahrung (Kubernetes, AgroCD, Ranger) sowie Erfahrung mit Progressive Webapps Ein (Fach)-hochschulabschluss oder eine abgeschlossene Ausbildung im Bereich Informatik sind von Vorteil Was Dich erwartet Spannende und vielseitige Projekte in einem internationalen Umfeld Die Möglichkeit, im Herzen von Berlin oder in der sonnigsten Stadt Deutschlands, in Freiburg, zu arbeiten Betriebliche Altersvorsorge und die Möglichkeit zu flexiblem, hybriden Arbeiten (Homeoffice) Attraktive Mitarbeiterrabatte und Sportangebote (Hansefit)"
 		},
 		{
+			"id": 2,
 			"position": "React Native Mobile Developer",
 			"url": "https://berlinstartupjobs.com/engineering/react-native-mobile-developer-prospr-at-work",
 			"skills": "Node.js, React, React Native, Firebase, Socket.io, Redis, MySQL, AWS",
 			"bulkText": "Working With Us You’ll build new product features from start to finish: through conception, research, development, refinement, documentation and maintenance.  You’ll work on key initiatives to keep our systems elegant and productivity high.  You’ll build and improve processes and internal tools with simplicity and productivity in mind.  You’ll gain ownership and domain expertise over part of the codebase, and contribute to growing it in accordance with our standards and best practices.  You will review code from your peers.  You will mentor more junior developers.  You will have the option of contributing to our team blog.  You will collaborate as a team on product vision and software design decisions.  What You Bring 3+ years of experience Shipped and maintained code in production; experience with SaaS/B2B products a plus.  Expert knowledge of Javascript Advanced knowledge of React Native and either Java/Android SDK or Swift/C# Familiarity with Firebase and strong knowledge of Android Studio or Xcode Meticulous mindset but you also understand that software engineering is about making trade-offs, balancing business and technical needs Good communication skills, comfortable working in a team, and can easily work with non-technical colleagues Fluent in English Why Work With Us The best tools: MacBook Pro, 34” UltraWide Monitor, Beats Headphones Learning Budget: EUR 3.000 / year Urban Sports Club Membership Monthly BVG Ticket Annual Team Retreat Competitive Salary: €70k – €85k Equity Participation: 0.25% – 0.5% Flexible Work Policy"
 		},
 		{
+			"id": 3,
 			"position": "Full Stack Engineer (Node.js)",
 			"url": "https://berlinstartupjobs.com/engineering/full-stack-engineer-node-js-m-f-d-minddoc",
 			"skills": "Node.js, JavaScript, Vue.js, React, Angular, Docker, Helm",
@@ -21,22 +24,27 @@
 	],
 	"jobSites": [
 		{
+			"id": 1,
 			"name": "get-in-it.de",
 			"url": "https://www.get-in-it.de/jobsuche"
 		},
 		{
+			"id": 2,
 			"name": "4scotty.com",
 			"url": "https://static.4scotty.com/top-jobs"
 		},
 		{
+			"id": 3,
 			"name": "monster.de",
 			"url": "https://www.monster.de/jobs/suche?q=React+Javascript&where=Berlin&page=1&so=m.s.sh"
 		},
 		{
+			"id": 4,
 			"name": "germanystartupjobs.com",
 			"url": "https://germanystartupjobs.com/search-jobs/?search_keywords=javascript"
 		},
 		{
+			"id": 5,
 			"name": "Berlin Startup Jobs",
 			"url": "https://berlinstartupjobs.com/skill-areas/javascript"
 		}
