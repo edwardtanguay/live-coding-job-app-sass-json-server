@@ -6,13 +6,13 @@ import { JobsList } from './components/JobsList';
 import md5 from 'md5';
 import { AddJob } from './components/AddJob';
 
+const jobsUrl = 'http://localhost:4556/jobs';
+
 const _jobs = db.jobs;
 
 _jobs.forEach((job) => {
 	job.status = 'accepted';
 });
-
-console.log(_jobs);
 
 const techItemsUrl = 'https://edwardtanguay.netlify.app/share/techItems.json';
 
@@ -58,7 +58,16 @@ function App() {
 		})();
 	};
 
+	const loadJobs = () => {
+		(async () => {
+			const response = await fetch(jobsUrl);
+			const data = await response.json();
+			console.log(data);
+		})();
+	}
+
 	useEffect(() => {
+		loadJobs();
 		loadLocalStorage();
 		loadTechItems();
 	}, []);
