@@ -133,11 +133,11 @@ function App() {
 				<>
 					<div className="buttonArea">
 						{userGroup === 'fullAccessMembers' && (
-							<button onClick={handleToggleView}>
+							<button className="btn_normal" onClick={handleToggleView}>
 								Toggle View
 							</button>
 						)}
-						<button onClick={handleLogoutButton}>Logout</button>
+						<button className="btn_logout" onClick={handleLogoutButton}>Logout</button>
 					</div>
 					{displayKind === 'full' && (
 						<JobsFull

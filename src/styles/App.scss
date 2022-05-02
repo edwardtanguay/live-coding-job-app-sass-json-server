@@ -1,9 +1,10 @@
-@import './variables_default.scss';
-// @import './variables_customer001.scss';
+@import './_functions.scss';
+@import './_variables_default.scss';
+// @import './_variables_customer001.scss';
 
 body {
 	background-color: #333;
-	padding: 0 30px;
+	padding: 0 sum(20px, $siteIndent);
 
 	.App {
 		font-size: $fontSize_large;
@@ -16,6 +17,15 @@ body {
 		.buttonArea {
 			display: flex;
 			justify-content: space-between;
+
+			.btn_normal {
+				font-family: monospace;
+			}
+
+			.btn_logout {
+				@extend .btn_normal;
+				color: red;
+			}
 		}
 
 		.jobs {
