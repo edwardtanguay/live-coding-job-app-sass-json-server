@@ -80,6 +80,7 @@ function App() {
 			displayKindIndex = 0;
 		}
 		setDisplayKind(displayKinds[displayKindIndex]);
+		loadJobs();
 	};
 
 	const saveJobStatusToDb = async (job) => {
@@ -180,7 +181,7 @@ function App() {
 						/>
 					)}
 					{displayKind === 'list' && <JobsList jobs={jobs} />}
-					{displayKind === 'addJob' && <AddJob />}
+					{displayKind === 'addJob' && <AddJob jobsUrl={jobsUrl} />}
 				</>
 			) : (
 				<form>
