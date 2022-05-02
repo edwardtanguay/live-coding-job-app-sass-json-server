@@ -12,6 +12,8 @@ _jobs.forEach((job) => {
 	job.status = 'accepted';
 });
 
+console.log(_jobs);
+
 const techItemsUrl = 'https://edwardtanguay.netlify.app/share/techItems.json';
 
 const statuses = ['send', 'wait', 'interview', 'declined', 'accepted'];
