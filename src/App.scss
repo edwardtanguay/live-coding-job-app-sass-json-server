@@ -1,3 +1,5 @@
+$color_skills: rgb(227, 231, 138);
+
 body {
 	background-color: #333;
 	padding: 0 30px;
@@ -49,7 +51,7 @@ body {
 
 			.skills {
 				font-size: 1.2rem;
-				color: rgb(212, 212, 130);
+				color: $color_skills;
 			}
 
 			.bulkText {
@@ -61,7 +63,7 @@ body {
 
 				li {
 					font-size: 0.9rem;
-					color: rgb(217, 217, 100);
+					color: $color_skills;
 				}
 			}
 		}
