@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --port=3555",
+    "api": "json-server --watch ./src/data/db.json --port 4556",
     "build": "vite build",
     "preview": "vite preview"
   },
